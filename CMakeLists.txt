@@ -404,7 +404,7 @@ set(CMAKEPACKAGE_INSTALL_DIR
     )
 set(PKGCONFIG_INSTALL_DIR
     "${CMAKE_INSTALL_DATADIR}/pkgconfig"
-    CACHE PATH "The directory relative to CMAKE_PREFIX_PATH where eigen3.pc is installed"
+    CACHE PATH "The directory relative to CMAKE_PREFIX_PATH where eigen3.3.7.pc is installed"
     )
 
 
@@ -425,8 +425,8 @@ install(FILES
   )
 
 if(EIGEN_BUILD_PKGCONFIG)
-    configure_file(eigen3.pc.in eigen3.pc @ONLY)
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/eigen3.pc
+    configure_file(eigen3.3.7.pc.in eigen3.3.7.pc @ONLY)
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/eigen3.3.7.pc
         DESTINATION ${PKGCONFIG_INSTALL_DIR}
         )
 endif()
